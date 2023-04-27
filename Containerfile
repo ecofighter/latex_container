@@ -50,11 +50,5 @@ RUN apt-get update -y \
     && miktex --admin --enable-installer fndb refresh \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/* \
-    && groupadd -g $GID user \
-    && useradd -s /bin/bash -u $UID -g $GID -md /home/user user
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-WORKDIR /workdir
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/bin/bash"]
