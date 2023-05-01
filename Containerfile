@@ -51,6 +51,6 @@ RUN apt-get update -y \
     && miktex --admin --enable-installer formats build uplatex \
     && miktex --admin --enable-installer fndb refresh \
     && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["/entrypoint.sh"]
