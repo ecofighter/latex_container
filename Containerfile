@@ -35,6 +35,8 @@ RUN apt-get update -y \
            braket \
            graphics \
            jsclasses \
+           subfiles \
+           standalone \
            dvipdfmx \
            uplatex \
            uptex-base \
